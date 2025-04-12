@@ -46,21 +46,43 @@
     h2 {
       margin-top: 40px;
     }
+
+    .icon {
+      width: 30px;
+      vertical-align: middle;
+      margin-right: 16px;
+    }
+
+    .titulo-icon {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
   </style>
 </head>
 <body>
-  <h2>Novo Pedido</h2>
+  <div class="titulo-icon">
+    <img src="Icons/box.png" class="icon">
+    <h2>Novo Pedido</h2>
+  </div>
   <input id="nome" placeholder="Nome do Cliente">
   <input id="endereco" placeholder="Endereço">
   <textarea id="materiais" placeholder="Materiais a serem entregues"></textarea>
   <button onclick="adicionarPedido()">Finalizar Rota</button>
 
-  <h2>Pedidos Atuais</h2>
+  <div class="titulo-icon">
+    <img src="Icons/user.png" class="icon">
+    <h2>Pedidos Atuais</h2>
+  </div>
   <div id="listaPedidos"></div>
 
-  <h2>Localização dos Caminhoneiros</h2>
+  <div class="titulo-icon">
+    <img src="Icons/gps.png" class="icon">
+    <h2>Localização dos Caminhoneiros</h2>
+  </div>
   <div id="listaLocalizacoes"></div>
 
+  <!-- Firebase e Script (permanece igual) -->
   <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"></script>
 
